@@ -347,12 +347,6 @@ public extension ToolBarButton {
         },
             actionOnSelection: actionOnSelection
         )
-//        textViewDelegate.registerDidChangeSelection { textView in
-//            if (textView.selectedRange.length > 0) {
-//                toolBarButton.isSelected = textView.isCharacterItalic(for: textView.currentCursorPosition ?? textView.selectedRange.location)
-//                toolBarButton.barButtonItem.isEnabled = true
-//            }
-//        }
         textViewDelegate.registerShouldChangeText { (textView, range, text) -> (Bool) in
             if text == "\n" {
                 textView.typingAttributes = [NSAttributedString.Key.font: StyleDescription]
