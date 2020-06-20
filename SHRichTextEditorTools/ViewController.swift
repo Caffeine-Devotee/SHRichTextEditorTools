@@ -20,6 +20,7 @@ final class ViewController: UIViewController {
 			textView: self.textView,
 			textViewDelegate: self.textEditor.textViewDelegate)
 		self.textEditor.toolBarItems = [
+            self.textEditor.textStyleBarItem(),
 			self.textEditor.boldBarItem(),
 			self.textEditor.italicBarItem(),
 			self.textEditor.indentationBarItem(),

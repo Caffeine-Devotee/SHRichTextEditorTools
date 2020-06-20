@@ -38,6 +38,8 @@
 		78B830561E5B0A32005B9057 /* SHRichTextEditorToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B830551E5B0A32005B9057 /* SHRichTextEditorToolsUITests.swift */; };
 		78D616D8216B6F6E00440E71 /* TextViewImageInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D616D7216B6F6E00440E71 /* TextViewImageInputHandler.swift */; };
 		78D616DB216B73D500440E71 /* LinkInputAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D616DA216B73D500440E71 /* LinkInputAlert.swift */; };
+		87ED9E52249C212F00F2D107 /* UITextView+FontStyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED9E51249C212F00F2D107 /* UITextView+FontStyleHelper.swift */; };
+		87ED9E54249C3B1600F2D107 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED9E53249C3B1600F2D107 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		78B830571E5B0A32005B9057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78D616D7216B6F6E00440E71 /* TextViewImageInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewImageInputHandler.swift; sourceTree = "<group>"; };
 		78D616DA216B73D500440E71 /* LinkInputAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInputAlert.swift; sourceTree = "<group>"; };
+		87ED9E51249C212F00F2D107 /* UITextView+FontStyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+FontStyleHelper.swift"; sourceTree = "<group>"; };
+		87ED9E53249C3B1600F2D107 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 				788C6545215CFDC700AF46A6 /* UITextView+ToolBarItemHelper.swift */,
 				788C6546215CFDC700AF46A6 /* UIFont+SymbolicTraits.swift */,
 				788C6547215CFDC700AF46A6 /* NSAttributedString+Helper.swift */,
+				87ED9E51249C212F00F2D107 /* UITextView+FontStyleHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				78D616D9216B6FDA00440E71 /* ImageInputHandler */,
 				788C655D215CFE0B00AF46A6 /* ImagePickerManager.swift */,
 				78D616DA216B73D500440E71 /* LinkInputAlert.swift */,
+				87ED9E53249C3B1600F2D107 /* Constant.swift */,
 			);
 			path = SHRichTextEditor;
 			sourceTree = "<group>";
@@ -419,6 +425,8 @@
 				788C656A215CFE0B00AF46A6 /* CameraInputView.swift in Sources */,
 				788C6557215CFDC700AF46A6 /* ToolBarItem.swift in Sources */,
 				788C6552215CFDC700AF46A6 /* UITextView+ImageHelper.swift in Sources */,
+				87ED9E52249C212F00F2D107 /* UITextView+FontStyleHelper.swift in Sources */,
+				87ED9E54249C3B1600F2D107 /* Constant.swift in Sources */,
 				788C6564215CFE0B00AF46A6 /* ImagePickerManager.swift in Sources */,
 				788C655B215CFDC700AF46A6 /* TextViewDelegate.swift in Sources */,
 				78B830361E5B0A32005B9057 /* AppDelegate.swift in Sources */,

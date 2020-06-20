@@ -47,6 +47,16 @@ open class SHRichTextEditor: NSObject, RichTextEditor {
         }
     }()
     
+    //Gaurav's Mess
+    public static let defaultTextStyleButtonType: ToolBarButton.ButtonType = {
+        let bundle = Bundle(for: SHRichTextEditor.classForCoder())
+        if let picureIcon = UIImage(named: "Style_0", in: bundle, compatibleWith: nil) {
+            return ToolBarButton.ButtonType.image(image: picureIcon)
+        } else {
+            return ToolBarButton.ButtonType.title(title: "Style")
+        }
+    }()
+    
     public static let defaultIndentationButtonType: ToolBarButton.ButtonType = {
         let bundle = Bundle(for: SHRichTextEditor.classForCoder())
         if let picureIcon = UIImage(named: "Bullet", in: bundle, compatibleWith: nil) {
@@ -175,6 +185,19 @@ open class SHRichTextEditor: NSObject, RichTextEditor {
             textView: self.textView,
             textViewDelegate: self.textViewDelegate
         )
+    }
+    
+    //Gaurav's Mess
+    public func textStyleBarItem(type: ToolBarButton.ButtonType = SHRichTextEditor.defaultTextStyleButtonType,
+                              actionOnSelection: ((ToolBarButton, Bool) -> Void)? = nil) -> ToolBarItem {
+        let defaultAction: ((ToolBarButton, Bool) -> Void) = { [unowned self] (item, isSelected) in
+            item.barButtonItem.tintColor = isSelected ? self.toolBarSelectedTintColor : self.toolBarDefaultTintColor
+        }
+        return ToolBarButton.configureTextStyleToolBarButton(
+            type: type,
+            actionOnSelection: actionOnSelection ?? defaultAction,
+            textView: self.textView,
+            textViewDelegate: self.textViewDelegate)
     }
     
     public func fixedSpaceToolBarItem(width: CGFloat) -> ToolBarSpacer {

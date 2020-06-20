@@ -333,4 +333,34 @@ public extension ToolBarButton {
         textViewDelegate.registerDidTapChange(with: updateState)
         return toolBarButton
     }
+    
+    //Gaurav's Mess
+    static func configureTextStyleToolBarButton(
+        type: ToolBarButton.ButtonType,
+        actionOnSelection: @escaping ((ToolBarButton, Bool) -> Void),
+        textView: UITextView,
+        textViewDelegate: TextViewDelegate) -> ToolBarButton {
+        let toolBarButton = ToolBarButton(
+            type: type,
+            actionOnTap: { item in
+                    textView.toggleFontStyle()
+        },
+            actionOnSelection: actionOnSelection
+        )
+//        textViewDelegate.registerDidChangeSelection { textView in
+//            if (textView.selectedRange.length > 0) {
+//                toolBarButton.isSelected = textView.isCharacterItalic(for: textView.currentCursorPosition ?? textView.selectedRange.location)
+//                toolBarButton.barButtonItem.isEnabled = true
+//            }
+//        }
+        textViewDelegate.registerShouldChangeText { (textView, range, text) -> (Bool) in
+            if text == "\n" {
+                textView.typingAttributes = [NSAttributedString.Key.font: StyleDescription]
+                return true
+            }
+            return true
+        }
+        return toolBarButton
+    }
+    
 }

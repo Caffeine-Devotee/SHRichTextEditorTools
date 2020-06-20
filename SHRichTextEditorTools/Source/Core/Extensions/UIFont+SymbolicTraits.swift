@@ -89,4 +89,37 @@ public extension UIFont {
 			return setItalic()
 		}
 	}
+    
+    //Gaurav's Mess
+    var isHeadingOne: Bool {
+        let fontAttributes = fontDescriptor.addingAttributes([.family: StyleHeadingOne])
+        if fontAttributes.matchingFontDescriptors(withMandatoryKeys: [.family]).first != nil {
+            return true
+        }
+        return false
+    }
+    
+    var isHeadingTwo: Bool {
+        let fontAttributes = fontDescriptor.addingAttributes([.family: StyleHeadingTwo])
+        if fontAttributes.matchingFontDescriptors(withMandatoryKeys: [.family]).first != nil {
+            return true
+        }
+        return false
+    }
+    
+    var isHeadingThree: Bool {
+        let fontAttributes = fontDescriptor.addingAttributes([.family: StyleHeadingThree])
+        if fontAttributes.matchingFontDescriptors(withMandatoryKeys: [.family]).first != nil {
+            return true
+        }
+        return false
+    }
+    
+    var isDescription: Bool {
+        let fontAttributes = fontDescriptor.addingAttributes([.family: StyleDescription])
+        if fontAttributes.matchingFontDescriptors(withMandatoryKeys: [.family]).first != nil {
+            return true
+        }
+        return false
+    }
 }

@@ -69,4 +69,14 @@ public extension UITextView {
 		let characterIndex = layoutManager.characterIndex(for: finalLocation, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
 		return characterIndex
 	}
+    
+    //Gaurav's Mess
+    var endOfLineIndex: Int? {
+        guard let selectedRange = selectedTextRange,
+            let endOfLinePosition = tokenizer.position(from: selectedRange.start, toBoundary: .line, inDirection:
+                UITextDirection.storage(.forward)) else {
+                return nil
+        }
+        return offset(from: beginningOfDocument, to: endOfLinePosition)
+    }
 }
